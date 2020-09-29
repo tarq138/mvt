@@ -38165,3 +38165,14 @@ form.dark-form ::-ms-input-placeholder {
   text-decoration: none;
   color: #666;
 }
+
+BODY.en *[lang=ru],
+BODY.ru *[lang=en] {
+  display: none !important
+}
+.hide {
+  display: none !important
+}
+form a {
+  cursor: pointer;
+}
