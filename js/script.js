@@ -10,10 +10,21 @@ $(document).ready(function(){
     changeLanguage(localStorage.getItem("language"))
 
     function changeLanguage(language) {
-        console.log(language)
         $("body").removeAttr('class')
         $("body").addClass(language)
         localStorage.setItem("language", language)
+        if (language == 'en') {
+            $("#slider-header").text('MaViTrans-Auto')
+            $("#slider-description").text('Discover the best shipping method!')
+            $("#slider-contact").text('Contact us')
+            $("#slider-about").text('About us')
+        }
+        if (language == 'ru') {
+            $("#slider-header").text('МаВиТранс-Авто')
+            $("#slider-description").text('Откройте лучший способ доставки!')
+            $("#slider-contact").text('Связаться с нами')
+            $("#slider-about").text('О нас')
+        }
     }
     $(".change-language").on('click', function(){
         changeLanguage($(this).attr("id"))
